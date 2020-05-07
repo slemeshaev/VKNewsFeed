@@ -23,6 +23,9 @@
                                 <state key="normal" title="Войти в VKNewsFeed">
                                     <color key="titleColor" red="0.30980392156862746" green="0.61176470588235299" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="signInTouch:" destination="KUb-bF-jpK" eventType="touchUpInside" id="dxI-Kb-ABD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -35,7 +38,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hGj-4a-j1B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-642" y="369"/>
+            <point key="canvasLocation" x="-39" y="103"/>
         </scene>
     </scenes>
 </document>
