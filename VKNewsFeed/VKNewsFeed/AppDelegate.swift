@@ -13,15 +13,7 @@ import VKSdkFramework
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    var authService: AuthService!
-    
-    static func shared() -> AppDelegate {
-        return UIApplication.shared.delegate as! AppDelegate
-    }
-    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        authService = AuthService()
-        authService.delegate = SceneDelegate() as AuthServiceDelegate
         return true
     }
     

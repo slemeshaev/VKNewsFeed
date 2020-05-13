@@ -12,6 +12,9 @@
 		6681199C2461F39C007A8F4F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6681199B2461F39C007A8F4F /* AuthService.swift */; };
 		6681199F2461F95E007A8F4F /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6681199E2461F95E007A8F4F /* AuthViewController.swift */; };
 		668119A324628FAA007A8F4F /* AuthViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 668119A02461F9C0007A8F4F /* AuthViewController.storyboard */; };
+		66A4C9C1246C1F4500EC71AB /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A4C9C0246C1F4500EC71AB /* FeedViewController.swift */; };
+		66A4C9C3246C1F6500EC71AB /* FeedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66A4C9C2246C1F6500EC71AB /* FeedViewController.storyboard */; };
+		66A4C9C6246C225300EC71AB /* UIViewController+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A4C9C5246C225300EC71AB /* UIViewController+Storyboard.swift */; };
 		66F669062461B1FA00433346 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F669052461B1FA00433346 /* AppDelegate.swift */; };
 		66F669082461B1FA00433346 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F669072461B1FA00433346 /* SceneDelegate.swift */; };
 		66F6690F2461B1FA00433346 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66F6690E2461B1FA00433346 /* Assets.xcassets */; };
@@ -47,6 +50,9 @@
 		6681199B2461F39C007A8F4F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		6681199E2461F95E007A8F4F /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		668119A02461F9C0007A8F4F /* AuthViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthViewController.storyboard; sourceTree = "<group>"; };
+		66A4C9C0246C1F4500EC71AB /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		66A4C9C2246C1F6500EC71AB /* FeedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeedViewController.storyboard; sourceTree = "<group>"; };
+		66A4C9C5246C225300EC71AB /* UIViewController+Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Storyboard.swift"; sourceTree = "<group>"; };
 		66F669022461B1FA00433346 /* VKNewsFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKNewsFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F669052461B1FA00433346 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66F669072461B1FA00433346 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +98,23 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
+		66A4C9C4246C1F7800EC71AB /* FeedNews */ = {
+			isa = PBXGroup;
+			children = (
+				66A4C9C0246C1F4500EC71AB /* FeedViewController.swift */,
+				66A4C9C2246C1F6500EC71AB /* FeedViewController.storyboard */,
+			);
+			path = FeedNews;
+			sourceTree = "<group>";
+		};
+		66A4C9C7246C225D00EC71AB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				66A4C9C5246C225300EC71AB /* UIViewController+Storyboard.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		66F668F92461B1F900433346 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +138,8 @@
 				66F669052461B1FA00433346 /* AppDelegate.swift */,
 				66F669072461B1FA00433346 /* SceneDelegate.swift */,
 				668119A22461F9E0007A8F4F /* Auth */,
+				66A4C9C4246C1F7800EC71AB /* FeedNews */,
+				66A4C9C7246C225D00EC71AB /* Helpers */,
 				6681199D2461F3AA007A8F4F /* Services */,
 				66F6690E2461B1FA00433346 /* Assets.xcassets */,
 				66F669102461B1FA00433346 /* LaunchScreen.storyboard */,
@@ -187,6 +212,7 @@
 				668119A324628FAA007A8F4F /* AuthViewController.storyboard in Resources */,
 				66F669122461B1FA00433346 /* LaunchScreen.storyboard in Resources */,
 				66F6690F2461B1FA00433346 /* Assets.xcassets in Resources */,
+				66A4C9C3246C1F6500EC71AB /* FeedViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,8 +246,10 @@
 			files = (
 				6681199F2461F95E007A8F4F /* AuthViewController.swift in Sources */,
 				66F669062461B1FA00433346 /* AppDelegate.swift in Sources */,
+				66A4C9C1246C1F4500EC71AB /* FeedViewController.swift in Sources */,
 				66F669082461B1FA00433346 /* SceneDelegate.swift in Sources */,
 				6681199C2461F39C007A8F4F /* AuthService.swift in Sources */,
+				66A4C9C6246C225300EC71AB /* UIViewController+Storyboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
