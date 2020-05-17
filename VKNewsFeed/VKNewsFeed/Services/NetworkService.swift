@@ -44,6 +44,7 @@ final class NetworkService: Networking {
     
     private func url(from path: String, params: [String: String]) -> URL {
         var components = URLComponents()
+        
         components.scheme = API.scheme
         components.host = API.host
         components.path = API.newsFeed
