@@ -16,18 +16,7 @@ class NewsfeedViewController: UIViewController, NewsfeedDisplayLogic {
     
     var interactor: NewsfeedBusinessLogic?
     var router: (NSObjectProtocol & NewsfeedRoutingLogic)?
-    
-    // MARK: Object lifecycle
-    
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        setup()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setup()
-    }
+    @IBOutlet weak var table: UITableView!
     
     // MARK: Setup
     
@@ -45,16 +34,39 @@ class NewsfeedViewController: UIViewController, NewsfeedDisplayLogic {
     
     // MARK: Routing
     
-    
-    
     // MARK: View lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
+        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
     
     func displayData(viewModel: Newsfeed.Model.ViewModel.ViewModelData) {
-        
+        switch viewModel {
+        case .some:
+            print(".some ViewController")
+        case .displayNewsfeed:
+            print(".displayNewsfeed ViewController")
+        }
     }
     
+}
+
+extension NewsfeedViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = "index: \(indexPath.row)"
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("select row")
+        interactor?.makeRequest(request: .some)
+    }
 }
