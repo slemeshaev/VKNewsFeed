@@ -138,11 +138,11 @@
 		6681199D2461F3AA007A8F4F /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				6616A2202471C1D000B1747D /* Models */,
 				6681199B2461F39C007A8F4F /* AuthService.swift */,
 				66C50125246DD5DA005E738A /* NetworkService.swift */,
 				66C50127246DD6A4005E738A /* API.swift */,
 				6616A2212471C77700B1747D /* NetworkDataFetcher.swift */,
-				6616A2202471C1D000B1747D /* Models */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -187,9 +187,9 @@
 				66F669052461B1FA00433346 /* AppDelegate.swift */,
 				66F669072461B1FA00433346 /* SceneDelegate.swift */,
 				668119A22461F9E0007A8F4F /* Auth */,
+				6681199D2461F3AA007A8F4F /* Services */,
 				6616A2232471D01E00B1747D /* Newsfeed */,
 				66A4C9C7246C225D00EC71AB /* Helpers */,
-				6681199D2461F3AA007A8F4F /* Services */,
 				66F6690E2461B1FA00433346 /* Assets.xcassets */,
 				66F669102461B1FA00433346 /* LaunchScreen.storyboard */,
 				66F669132461B1FA00433346 /* Info.plist */,
