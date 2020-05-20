@@ -20,6 +20,7 @@
 		6616A2382473DE8200B1747D /* NewsfeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6616A2372473DE8200B1747D /* NewsfeedCell.xib */; };
 		6616A23A24744B9B00B1747D /* WebImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6616A23924744B9B00B1747D /* WebImageView.swift */; };
 		6616A23C2475411400B1747D /* NewsfeedCellLayoutCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6616A23B2475411400B1747D /* NewsfeedCellLayoutCalculator.swift */; };
+		6616A23E24755A3600B1747D /* String+Height.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6616A23D24755A3600B1747D /* String+Height.swift */; };
 		663B02B42461BF0E003CED4F /* VKSdkFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 663B02B32461BF0E003CED4F /* VKSdkFramework.framework */; };
 		663B02B52461BF0E003CED4F /* VKSdkFramework.framework in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 663B02B32461BF0E003CED4F /* VKSdkFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6681199C2461F39C007A8F4F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6681199B2461F39C007A8F4F /* AuthService.swift */; };
@@ -72,6 +73,7 @@
 		6616A2372473DE8200B1747D /* NewsfeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsfeedCell.xib; sourceTree = "<group>"; };
 		6616A23924744B9B00B1747D /* WebImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebImageView.swift; sourceTree = "<group>"; };
 		6616A23B2475411400B1747D /* NewsfeedCellLayoutCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsfeedCellLayoutCalculator.swift; sourceTree = "<group>"; };
+		6616A23D24755A3600B1747D /* String+Height.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Height.swift"; sourceTree = "<group>"; };
 		663B02B32461BF0E003CED4F /* VKSdkFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VKSdkFramework.framework; path = Carthage/Build/iOS/VKSdkFramework.framework; sourceTree = "<group>"; };
 		6681199B2461F39C007A8F4F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		6681199E2461F95E007A8F4F /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			children = (
 				66A4C9C5246C225300EC71AB /* UIViewController+Storyboard.swift */,
 				6616A23924744B9B00B1747D /* WebImageView.swift */,
+				6616A23D24755A3600B1747D /* String+Height.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				6616A22D2471D07400B1747D /* NewsfeedRouter.swift in Sources */,
 				6616A22B2471D07400B1747D /* NewsfeedPresenter.swift in Sources */,
 				66A4C9C6246C225300EC71AB /* UIViewController+Storyboard.swift in Sources */,
+				6616A23E24755A3600B1747D /* String+Height.swift in Sources */,
 				66C50128246DD6A4005E738A /* API.swift in Sources */,
 				6616A21F2471C1B600B1747D /* FeedResponse.swift in Sources */,
 				6616A23C2475411400B1747D /* NewsfeedCellLayoutCalculator.swift in Sources */,
