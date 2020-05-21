@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6614AB702476CC270085D3AD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6614AB6F2476CC270085D3AD /* Constants.swift */; };
 		6616A21F2471C1B600B1747D /* FeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6616A21E2471C1B600B1747D /* FeedResponse.swift */; };
 		6616A2222471C77700B1747D /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6616A2212471C77700B1747D /* NetworkDataFetcher.swift */; };
 		6616A22B2471D07400B1747D /* NewsfeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6616A2242471D07400B1747D /* NewsfeedPresenter.swift */; };
@@ -62,6 +63,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6614AB6F2476CC270085D3AD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6616A21E2471C1B600B1747D /* FeedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedResponse.swift; sourceTree = "<group>"; };
 		6616A2212471C77700B1747D /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
 		6616A2242471D07400B1747D /* NewsfeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsfeedPresenter.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			children = (
 				6616A2352473DE1C00B1747D /* NewsfeedCell.swift */,
 				6616A23B2475411400B1747D /* NewsfeedCellLayoutCalculator.swift */,
+				6614AB6F2476CC270085D3AD /* Constants.swift */,
 				6616A2372473DE8200B1747D /* NewsfeedCell.xib */,
 				6616A23F24759D7100B1747D /* NewsfeedCodeCell.swift */,
 			);
@@ -310,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6681199F2461F95E007A8F4F /* AuthViewController.swift in Sources */,
+				6614AB702476CC270085D3AD /* Constants.swift in Sources */,
 				6616A2422475A4D800B1747D /* Constraints.swift in Sources */,
 				6616A23A24744B9B00B1747D /* WebImageView.swift in Sources */,
 				66F669062461B1FA00433346 /* AppDelegate.swift in Sources */,
