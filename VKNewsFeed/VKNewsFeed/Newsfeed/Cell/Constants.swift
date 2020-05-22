@@ -17,4 +17,9 @@ struct Constants {
                                               right: 8)
     static let postLabelFont = UIFont.systemFont(ofSize: 15)
     static let bottomViewHeight: CGFloat = 44
+    
+    static let bottomViewViewHeight: CGFloat = 44
+    static let bottomViewViewWidth: CGFloat = 80
+    
+    static let bottomViewViewsIconSize: CGFloat = 24
 }
