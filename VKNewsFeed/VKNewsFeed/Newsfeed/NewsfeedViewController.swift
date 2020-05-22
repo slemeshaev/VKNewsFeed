@@ -12,7 +12,7 @@ protocol NewsfeedDisplayLogic: class {
     func displayData(viewModel: Newsfeed.Model.ViewModel.ViewModelData)
 }
 
-class NewsfeedViewController: UIViewController, NewsfeedDisplayLogic {
+class NewsfeedViewController: UIViewController, NewsfeedDisplayLogic, NewsfeedCodeCellDelegate {
     
     var interactor: NewsfeedBusinessLogic?
     var router: (NSObjectProtocol & NewsfeedRoutingLogic)?
@@ -62,6 +62,12 @@ class NewsfeedViewController: UIViewController, NewsfeedDisplayLogic {
         }
     }
     
+    // MARK: NewsfeedCodeCellDelegate
+    
+    func revealPost(for cell: NewsfeedCodeCell) {
+        print("43454")
+    }
+    
 }
 
 extension NewsfeedViewController: UITableViewDataSource, UITableViewDelegate {
@@ -76,13 +82,12 @@ extension NewsfeedViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: NewsfeedCodeCell.reuseId, for: indexPath) as! NewsfeedCodeCell
         let cellViewModel = feedViewModel.cells[indexPath.row]
         cell.set(viewModel: cellViewModel)
-        cell.textLabel?.text = "index \(indexPath.row)"
+        cell.deleagte = self
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let cellViewModel = feedViewModel.cells[indexPath.row]
         return cellViewModel.sizes.totalHeight
-        // return 212
     }
 }
