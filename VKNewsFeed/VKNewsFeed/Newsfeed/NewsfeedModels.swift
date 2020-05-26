@@ -38,7 +38,7 @@ struct FeedViewModel {
         var name: String
         var date: String
         var text: String?
-        var photoAttachment: FeedCellPhotoAttachmentViewModel?
+        var photoAttachments: [FeedCellPhotoAttachmentViewModel]
         var likes: String?
         var comments: String?
         var shares: String?
