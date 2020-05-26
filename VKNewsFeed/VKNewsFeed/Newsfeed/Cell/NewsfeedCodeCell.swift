@@ -52,6 +52,8 @@ final class NewsfeedCodeCell: UITableViewCell {
         return button
     }()
     
+    let galleryCollectionView = GalleryCollectionView()
+    
     let postImageView: WebImageView = {
         let imageView = WebImageView()
         return imageView
@@ -221,14 +223,21 @@ final class NewsfeedCodeCell: UITableViewCell {
         postLabel.text = viewModel.text
         postLabel.frame = viewModel.sizes.postLabelFrame
         
-        // картинка поста
-        if let photoAttachment = viewModel.photoAttachment {
+        // картинки поста
+        if let photoAttachment = viewModel.photoAttachments.first, viewModel.photoAttachments.count == 1 {
             postImageView.set(imageURL: photoAttachment.photoUrlString)
             postImageView.isHidden = false
+            galleryCollectionView.isHidden = true
+            postImageView.frame = viewModel.sizes.attachmentFrame
+        } else if viewModel.photoAttachments.count > 1 {
+            galleryCollectionView.frame = viewModel.sizes.attachmentFrame
+            postImageView.isHidden = true
+            galleryCollectionView.isHidden = false
+            galleryCollectionView.set(photos: viewModel.photoAttachments)
         } else {
             postImageView.isHidden = true
+            galleryCollectionView.isHidden = true
         }
-        postImageView.frame = viewModel.sizes.attachmentFrame
         
         // bottom view
         bottomView.frame = viewModel.sizes.bottomViewFrame
@@ -236,20 +245,7 @@ final class NewsfeedCodeCell: UITableViewCell {
         commentsLabel.text = viewModel.comments
         sharesLabel.text = viewModel.shares
         viewsLabel.text = viewModel.views
-        // текст поста
-        postLabel.frame = viewModel.sizes.postLabelFrame
         
-        // картинка поста
-        if let photoAttachment = viewModel.photoAttachment {
-            postImageView.set(imageURL: photoAttachment.photoUrlString)
-            postImageView.isHidden = false
-        } else {
-            postImageView.isHidden = true
-        }
-        postImageView.frame = viewModel.sizes.attachmentFrame
-        
-        // bottom view
-        bottomView.frame = viewModel.sizes.bottomViewFrame
         moreTextButton.frame = viewModel.sizes.moreTextButtonFrame
     }
     
@@ -354,6 +350,7 @@ final class NewsfeedCodeCell: UITableViewCell {
         cardView.addSubview(postLabel)
         cardView.addSubview(moreTextButton)
         cardView.addSubview(postImageView)
+        cardView.addSubview(galleryCollectionView)
         cardView.addSubview(bottomView)
         
         // topView constraints

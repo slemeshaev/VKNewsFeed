@@ -13,7 +13,7 @@ protocol FeedCellViewModel {
     var name: String { get set }
     var date: String { get set }
     var text: String? { get }
-    var photoAttachment: FeedCellPhotoAttachmentViewModel? { get }
+    var photoAttachments: [FeedCellPhotoAttachmentViewModel] { get }
     var likes: String? { get }
     var comments: String? { get }
     var shares: String? { get }
@@ -68,31 +68,31 @@ class NewsfeedCell: UITableViewCell {
         selectionStyle = .none
     }
     
-    func set(viewModel: FeedCellViewModel) {
-        // top view
-        iconImageView.set(imageURL: viewModel.iconUrlString)
-        nameLabel.text = viewModel.name
-        dateLabel.text = viewModel.date
-        
-        // текст поста
-        postLabel.text = viewModel.text
-        postLabel.frame = viewModel.sizes.postLabelFrame
-        
-        // картинка поста
-        if let photoAttachment = viewModel.photoAttachment {
-            postImageView.set(imageURL: photoAttachment.photoUrlString)
-            postImageView.isHidden = false
-        } else {
-            postImageView.isHidden = true
-        }
-        postImageView.frame = viewModel.sizes.attachmentFrame
-        
-        // bottom view
-        bottomView.frame = viewModel.sizes.bottomViewFrame
-        likesLabel.text = viewModel.likes
-        commentsLabel.text = viewModel.comments
-        sharesLabel.text = viewModel.shares
-        viewsLabel.text = viewModel.views
-    }
+//    func set(viewModel: FeedCellViewModel) {
+//        // top view
+//        iconImageView.set(imageURL: viewModel.iconUrlString)
+//        nameLabel.text = viewModel.name
+//        dateLabel.text = viewModel.date
+//        
+//        // текст поста
+//        postLabel.text = viewModel.text
+//        postLabel.frame = viewModel.sizes.postLabelFrame
+//        
+//        // картинка поста
+//        if let photoAttachment = viewModel.photoAttachment {
+//            postImageView.set(imageURL: photoAttachment.photoUrlString)
+//            postImageView.isHidden = false
+//        } else {
+//            postImageView.isHidden = true
+//        }
+//        postImageView.frame = viewModel.sizes.attachmentFrame
+//        
+//        // bottom view
+//        bottomView.frame = viewModel.sizes.bottomViewFrame
+//        likesLabel.text = viewModel.likes
+//        commentsLabel.text = viewModel.comments
+//        sharesLabel.text = viewModel.shares
+//        viewsLabel.text = viewModel.views
+//    }
     
 }
