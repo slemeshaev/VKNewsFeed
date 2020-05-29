@@ -75,6 +75,7 @@ final class NewsfeedCodeCell: UITableViewCell {
     let nameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         return label
     }()
