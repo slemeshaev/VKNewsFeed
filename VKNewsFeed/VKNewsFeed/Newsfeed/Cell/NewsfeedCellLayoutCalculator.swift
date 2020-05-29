@@ -66,18 +66,10 @@ final class NewsfeedCellLayoutCalculator: FeedCellLayoutCalculatorProtocol {
         let moreTextButtonFrame = CGRect(origin: moreTextButtonOrigin, size: moreTextButtonsSize)
         
         // MARK: - Работа с attachmentFrame
-        
         let attachmentTop = postLabelFrame.size == CGSize.zero ? Constants.postLabelInsets.top : moreTextButtonFrame.maxY + Constants.postLabelInsets.bottom
         
         var attachmentFrame = CGRect(origin: CGPoint(x: 0, y: attachmentTop),
                                      size: CGSize.zero)
-        
-//        if let attachment = photoAttachment {
-//            let photoHeight: Float = Float(attachment.height)
-//            let photoWidth: Float = Float(attachment.width)
-//            let ration = CGFloat(photoHeight / photoWidth)
-//            attachmentFrame.size = CGSize(width: cardViewWidth, height: cardViewWidth * ration)
-//        }
         
         if let attachment = photoAttachments.first {
             let photoHeight: Float = Float(attachment.height)
