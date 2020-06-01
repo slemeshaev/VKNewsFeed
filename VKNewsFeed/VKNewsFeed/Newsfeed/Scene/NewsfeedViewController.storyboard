@@ -15,6 +15,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aOr-FF-rdg" customClass="GradientView" customModule="VKNewsFeed" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" red="0.1848598421" green="0.1184501573" blue="0.32251983880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v7O-Qi-syc">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -24,12 +36,17 @@
                                 </connections>
                             </tableView>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="v7O-Qi-syc" firstAttribute="leading" secondItem="qLi-Y8-7qp" secondAttribute="leading" id="12R-tQ-5Bf"/>
+                            <constraint firstItem="aOr-FF-rdg" firstAttribute="leading" secondItem="qLi-Y8-7qp" secondAttribute="leading" id="BaQ-mY-0Yp"/>
+                            <constraint firstItem="aOr-FF-rdg" firstAttribute="bottom" secondItem="qLi-Y8-7qp" secondAttribute="bottom" id="CXG-Pc-i5h"/>
                             <constraint firstItem="qLi-Y8-7qp" firstAttribute="trailing" secondItem="v7O-Qi-syc" secondAttribute="trailing" id="GDF-31-haY"/>
                             <constraint firstItem="v7O-Qi-syc" firstAttribute="bottom" secondItem="qLi-Y8-7qp" secondAttribute="bottom" id="JIl-mU-Y9f"/>
+                            <constraint firstItem="aOr-FF-rdg" firstAttribute="trailing" secondItem="qLi-Y8-7qp" secondAttribute="trailing" id="QDj-Qe-9Db"/>
                             <constraint firstItem="qLi-Y8-7qp" firstAttribute="bottom" secondItem="v7O-Qi-syc" secondAttribute="bottom" id="YzY-y8-3cN"/>
                             <constraint firstItem="v7O-Qi-syc" firstAttribute="top" secondItem="qLi-Y8-7qp" secondAttribute="top" id="hO1-2C-Bjl"/>
+                            <constraint firstItem="aOr-FF-rdg" firstAttribute="top" secondItem="qLi-Y8-7qp" secondAttribute="top" id="n4i-r5-k8i"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qLi-Y8-7qp"/>
                     </view>
@@ -39,7 +56,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mr3-Pq-xoy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1138" y="-483"/>
+            <point key="canvasLocation" x="-1582" y="-672"/>
         </scene>
     </scenes>
 </document>
